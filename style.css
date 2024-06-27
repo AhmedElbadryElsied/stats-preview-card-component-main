@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+--Dark-desaturated-blue: hsl(244, 38%, 16%);
+--Soft-violet: hsl(277, 64%, 61%);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    /* font-family: "Lexend Deca", sans-serif; */
+}
+body{
+    min-height:100vh ;
+    background: var(--Very-dark-blue);
+    display: grid;
+    place-content: center;
+
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 1000px;
+    margin: 2rem;
+  
+}
+.product .content{
+    background: var(--Dark-desaturated-blue);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 10px 0 0 10px;
+}
+.product .content h1 {
+    padding-right:2rem ;
+    margin-bottom: 2rem;
+}
+.product .content h1 span{
+    color: var(--Soft-violet);
+}
+.product .content> p{
+    color: var(--Slightly-transparent-white);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+.product .content div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 2.5rem 2.5rem;
+
+}
+.product .content div .number{
+    margin-right: 3rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+.product .content div .number span{
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.product img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius:0 10px 10px 0 ;
+}
+/* tablet */
+@media(max-width:1000px){
+    .product{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 500px;
+        margin: 1rem;
+    }
+    .product .content{
+        padding: 2rem;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+    }
+    .product .content div{
+        grid-template-columns: 1fr;
+    }
+    .product .content div .number{
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .product img{
+        border-radius: 10px 10px 0 0;
+    }
+}
+/* mobile  */
+@media (max-width:450px){
+    .product .content{
+        padding: 2rem 1rem ;
+        max-width: 400px;
+    }
+    .product .content h1{
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    .product .content> p{
+        margin-bottom: 0;
+    }
+    .product .content div .number{
+        margin-bottom: 1rem;
+    }
+    
+}
+
